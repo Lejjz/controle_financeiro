@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Controle Financeiro</h1>
+
+<div class="container">
+  <!-- Summary -->
+  <div class="summary">
+    <div>
+      <p>Entradas</p>
+      <span id="total-entradas">R$ 0,00</span>
+    </div>
+    <div>
+      <p>Saídas</p>
+      <span id="total-saidas">R$ 0,00</span>
+    </div>
+    <div>
+      <p>Total</p>
+      <span id="saldo-total">R$ 0,00</span>
+    </div>
+  </div>
+
+  <!-- Formulário de Entrada/Saída -->
+  <div class="input-form">
+    <input type="text" id="descricao" placeholder="Descrição">
+    <input type="number" id="valor" placeholder="Valor">
+    <input type="date" id="data-vencimento">
+    <select id="fixo">
+      <option value="nao-fixo">Não Fixo</option>
+      <option value="fixo">Fixo</option>
+    </select>
+    <input type="number" id="parcelas" placeholder="Parcelas" style="display: none;">
+    <div class="button-group">
+      <select id="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+      <button class="add-btn" onclick="adicionarTransacao()">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- Lista de Entradas/Saídas -->
+  <div class="entry-list" id="lista-transacoes"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
