@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;  
   }
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: rgba(93, 146, 150, 1);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
   
   h1 {
     font-size: 2em;
-    color: #333;
+    color: white;
     margin-bottom: 20px;
   }
   
@@ -30,7 +30,15 @@
     justify-content: space-between;
     margin-bottom: 20px;
   }
-  
+  .summary #entrad{
+    color: red;
+  }
+  .summary #saida{
+    color: blue;
+  }
+  .summary #total{
+    color: green;
+  } 
   .summary div {
     background-color: #fff;
     padding: 20px;
@@ -68,6 +76,7 @@
   }
   
   .add-btn {
+    margin-left: 10px;
     background-color: #4CAF50;
     color: white;
     padding: 8px 10px;
@@ -106,7 +115,7 @@
   }
   
   .entry-actions button {
-    background-color: #007bff;
+    color: #007bff;
     color: white;
     padding: 5px 10px;
     margin-left: 5px;
@@ -126,5 +135,31 @@
   
   .edit-btn {
     background-color: #ffc107;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
   }
   
